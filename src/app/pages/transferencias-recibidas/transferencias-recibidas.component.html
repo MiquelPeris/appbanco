@@ -1,0 +1,19 @@
+<div class="fila-tabla">
+    <div class="cabeza-tabla">Concepto</div>
+    <div class="cabeza-tabla">Importe</div>
+    <div class="cabeza-tabla">Fecha</div>
+</div>
+<article class="fila-tabla" *ngFor="let transferencia of transferencias">
+    <div>{{transferencia.concepto}}</div>
+    <div>{{transferencia.importe | currency: 'EUR' }}</div>
+    <div>{{transferencia.fecha | date: 'hh:mm:ss' }}</div>
+</article>
+
+<!-- 
+    Crear una página en Angular
+1- generar el componente de la página
+2- añadimos la ruta al routing module correspondiente (app/auth/pages)
+3- añadimos el enlace a la página en el menú
+4- preparamos las variables del componente (ts)
+5- mostramos las variables en el HTML  
+-->

@@ -1,0 +1,17 @@
+.fila-tabla{
+    display: flex;
+    gap: 20px;
+    
+}
+
+.cabeza-tabla{
+    font-weight: 600;
+}
+
+.fila-tabla > div {
+    width: 25%;
+}
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
