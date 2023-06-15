@@ -1,10 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
 *{
     background-color: rgb(49, 49, 49);
-    color: rgb(221, 102, 236);
+    color: rgb(91, 189, 219);
+    --text-color: rgb(120, 223, 255);
+    --text-negative-color: rgb(49,49,49);
+    --text-secondary-color: rgb(91, 218, 175);
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 a{
     text-decoration: none;
     font-weight: 800;
 }
+
+.fila-tabla{
+    display: flex;
+    gap: 20px;
+    
+}
+
+.cabeza-tabla{
+    font-weight: 600;
+}
+
+.fila-tabla > div {
+    width: 25%;
+}
+
+button{
+    font-size: 15px;
+    font-weight: 800;
+    padding: 15px;
+    border-radius: 15px;
+    color: var(--text-negative-color);
+    background-color: var(--text-color);
+}
+
+button:hover{
+    color: var(--text-negative-color);
+    background-color: var(--text-color);
+    font-size: 18px;
+}
+
