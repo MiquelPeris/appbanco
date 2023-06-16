@@ -1,1 +1,4 @@
-<p>ingresos-gastos works!</p>
+<h2>Movimientos de la cuenta</h2>
+<p *ngFor= "let transferencia of transferencias">{{transferencia.concepto}}: {{transferencia.importe | currency: 'EUR'}} el día {{transferencia.fecha | date: "short"}}</p>
+<p *ngFor= "let transferencia of transferencias"></p>
+<p *ngFor= "let transferencia of transferencias"></p>

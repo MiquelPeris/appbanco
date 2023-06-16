@@ -1,14 +1,32 @@
-<h1>Banco Misco</h1>
-<nav class="main-menu">
+<h1><a routerLink="/pages/dashboard">Banco NoCorrupto</a></h1>
+<nav class="main-menu navbar">
   <ul>
-    <li><a class="navbar" routerLink="/pages/dashboard">Inicio</a></li>
-    <li><a class="navbar" routerLink="/auth">Iniciar Sesión</a></li>
-    <li><a class="navbar" routerLink="/pages/mi-cuenta">Mi Cuenta</a></li>
-    <li><a class="navbar" routerLink="/pages/transferencias-lista">Lista de Transferencia</a></li>
-    <li><a class="navbar" routerLink="/pages/transferencia-nueva">Nueva Transferencia</a></li>
-    <li><a class="navbar" routerLink="/pages/transferencias-recibidas">transferencias Recibidas</a></li>
-    <li><a class="navbar" routerLink="/pages/transferencias-enviadas">Transferencias Enviadas</a></li>
-    <li><a class="navbar" routerLink="/pages/ingresos-gastos">Ingresos y Gastos</a></li>
+    <li><a class="menu-item" routerLinkActive="active-menu" [routerLinkActiveOptions]="{exact:true}" 
+        routerLink="/pages/dashboard">Inicio</a></li>
+    <li><a class="menu-item" routerLinkActive="active-menu" [routerLinkActiveOptions]="{exact:true}" 
+        routerLink="/auth">Iniciar Sesión</a></li>
+    <li class="dropdown-menu">
+      <a class="menu-item" routerLinkActive="active-menu" [routerLinkActiveOptions]="{exact:true}" 
+        routerLink="/pages/mi-cuenta">Mi Cuenta</a>
+      <ul class="submenu">
+        <li><a routerLinkActive="active-menu" [routerLinkActiveOptions]="{exact:true}" 
+            routerLink="/pages/ingresos-gastos">Ingresos y Gastos</a></li>
+      </ul>
+    </li>
+    <li class="dropdown-menu">
+      <a class="menu-item" routerLinkActive="active-menu" [routerLinkActiveOptions]="{exact:true}"
+              routerLink="/pages/transferencias-lista">Transferencias</a>
+      <ul class="submenu">
+        <li><a routerLinkActive="active-menu" [routerLinkActiveOptions]="{exact:true}"
+            routerLink="/pages/transferencia-nueva">Nueva Transferencia</a></li>
+        <li><a routerLinkActive="active-menu" [routerLinkActiveOptions]="{exact:true}" 
+            routerLink="/pages/transferencias-recibidas">Transferencias Recibidas</a></li>
+        <li><a routerLinkActive="active-menu" [routerLinkActiveOptions]="{exact:true}" 
+            routerLink="/pages/transferencias-enviadas">Transferencias Enviadas</a></li>
+      </ul>
+    </li>
+
+
   </ul>
 </nav>
 <!-- aquí se recarga el contenido al cambiar de ruta -->

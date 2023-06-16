@@ -1,0 +1,14 @@
+.dropdown-menu{
+    position: relative;
+}
+
+.dropdown-menu .submenu{
+    background-color: var(--submenu);
+    position: absolute;
+    display: none;
+}
+
+.dropdown-menu:hover .submenu{
+    background-color: var(--submenu);
+    display: block;
+}

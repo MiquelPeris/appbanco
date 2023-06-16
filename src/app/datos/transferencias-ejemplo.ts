@@ -4,7 +4,7 @@ export const transferenciasRecibidas = [
         idOrdenante: 1,
         idBeneficiario: 2,
         importe: 50.00,
-        concepto: "Regalo de cumpleaños uwu",
+        concepto: "Regalo de cumpleaños",
         fecha: new Date(),
     },
     {
