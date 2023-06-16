@@ -1,45 +1,118 @@
 /* You can add global styles to this file, and also import other style files */
-*{
-    background-color: rgb(49, 49, 49);
-    color: rgb(91, 189, 219);
-    --text-color: rgb(120, 223, 255);
-    --text-negative-color: rgb(49,49,49);
+* {
+    --text-color: rgb(91, 189, 219);
+    --text-color-title: rgb(96, 247, 214);
+    --text-negative-color: rgb(49, 49, 49);
     --text-secondary-color: rgb(91, 218, 175);
+    --background-color-alternative: rgb(27, 27, 27);
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-a{
+
+
+
+html {
+    margin: auto;
+    max-width: 678px;
+    background-color: var(--text-negative-color);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--text-color-title)
+}
+
+h1{
+    text-align: center;
+}
+
+a { 
     text-decoration: none;
     font-weight: 800;
 }
 
-.fila-tabla{
-    display: flex;
-    gap: 20px;
-    
+p{
+    color: var(--text-color)
 }
 
-.cabeza-tabla{
+p:hover{
+    color: var(--text-negative-color);
+    background-color: var(--text-color)
+}
+
+.fila-tabla {
+    display: flex;
+    gap: 20px;
+
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li a{
+    color: var(--text-color);
+    background-color: var(--background-color-alternative);
+    display: block;
+    width: 100px;
+}
+
+li a:hover{
+    color: var(--text-negative-color);
+    background-color: var(--text-secondary-color);
+
+}
+
+.cabeza-tabla {
     font-weight: 600;
 }
 
-.fila-tabla > div {
+.fila-tabla>div {
     width: 25%;
 }
 
-button{
+.navbar {
     font-size: 15px;
-    font-weight: 800;
+    font-weight:700;
     padding: 15px;
-    border-radius: 15px;
-    color: var(--text-negative-color);
-    background-color: var(--text-color);
 }
 
-button:hover{
+button:hover {
     color: var(--text-negative-color);
     background-color: var(--text-color);
     font-size: 18px;
 }
 
+p {
+    color: aquamarine;
+}
+
+.main-menu ul {
+    justify-content: center;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 13px;
+    gap: 20px;
+}
+
+.contenedor {
+    border-radius: 15px;
+
+    color: var(--text-color);
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+    background-color: var(--background-color-alternative);
+}
+
+/* @media(max-width: 768px){
+    .main-menu ul{
+    display: block;
+    }
+} */

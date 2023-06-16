@@ -1,5 +1,10 @@
 <section>
-    <input [(ngModel)]="email" placeholder="Email" type="email">
-    <input [(ngModel)]="password" placeholder="Contraseña" type="password">
-    <button (click)="validarLogin()" class="btn">Dale duro</button>
+    <ul>
+        <li class="login"><input [(ngModel)]="email" placeholder="Email" type="email"></li>
+        <li class="login"><input [(ngModel)]="password" placeholder="Contraseña" type="password"></li>
+    </ul>
+    <ul>
+        <li class="iniciar"><button (click)="validarLogin()" class="btn">Dale duro</button></li>
+    </ul>
+    
 </section>

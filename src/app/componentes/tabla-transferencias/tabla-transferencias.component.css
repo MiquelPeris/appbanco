@@ -1,0 +1,9 @@
+.fila-tabla{
+    cursor: pointer;
+    padding: 5px;
+
+}
+
+.fila-tabla .cabeza-tabla{
+    cursor:auto;
+}

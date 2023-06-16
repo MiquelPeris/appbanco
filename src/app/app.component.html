@@ -1,11 +1,17 @@
 <h1>Banco Misco</h1>
 <nav class="main-menu">
   <ul>
-    <li><button routerLink="/auth/login">Iniciar Sesión</button></li>
-    <li><button routerLink="/pages/dashboard">Inicio</button></li>
-    <li><button routerLink="/pages/transferencias-recibidas">transferencias Recibidas</button></li>
-    <li><button routerLink="/pages/transferencias-enviadas">Transferencias Enviadas</button></li>
+    <li><a class="navbar" routerLink="/pages/dashboard">Inicio</a></li>
+    <li><a class="navbar" routerLink="/auth">Iniciar Sesión</a></li>
+    <li><a class="navbar" routerLink="/pages/mi-cuenta">Mi Cuenta</a></li>
+    <li><a class="navbar" routerLink="/pages/transferencias-lista">Lista de Transferencia</a></li>
+    <li><a class="navbar" routerLink="/pages/transferencia-nueva">Nueva Transferencia</a></li>
+    <li><a class="navbar" routerLink="/pages/transferencias-recibidas">transferencias Recibidas</a></li>
+    <li><a class="navbar" routerLink="/pages/transferencias-enviadas">Transferencias Enviadas</a></li>
+    <li><a class="navbar" routerLink="/pages/ingresos-gastos">Ingresos y Gastos</a></li>
   </ul>
 </nav>
-<!-- aquí se recarga el contrenido al cambiar de ruta -->
-<router-outlet></router-outlet>
+<!-- aquí se recarga el contenido al cambiar de ruta -->
+<div class="contenedor">
+  <router-outlet></router-outlet>
+</div>
