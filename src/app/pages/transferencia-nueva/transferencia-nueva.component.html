@@ -1,1 +1,16 @@
-<p>¡Haz una nueva transferencia! :D</p>
+<section>
+    <h2>Nueva Transferencia:</h2>
+    <div class="transferenciar">
+        <input [(ngModel)]="nuevaTransferencia.beneficiario.id" placeholder="ID Beneficiario" type="number">
+    </div>
+    <div class="importe">
+        <input [(ngModel)]="nuevaTransferencia.importe" step="0.01" type="number">
+    </div>
+    <div class="concepto">
+        <input [(ngModel)]="nuevaTransferencia.concepto" placeholder="Escribir el concepto" type="text">
+    </div>
+    <div class="transferenciar">
+        <button (click)="enviarTransferencia()">Confirmar</button>
+    </div>
+    <p>{{feedback}}</p>
+</section>

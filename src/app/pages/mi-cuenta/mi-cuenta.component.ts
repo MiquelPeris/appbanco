@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { usuarios } from 'src/app/datos/usuarios-ejemplo';
+import { clientes } from 'src/app/datos/clientes-ejemplo';
+import { ClienteService } from 'src/app/services/cliente/cliente.service';
 
 
 @Component({
@@ -9,6 +10,12 @@ import { usuarios } from 'src/app/datos/usuarios-ejemplo';
 })
 export class MiCuentaComponent {
 
-  cuenta: any = usuarios[1];
+  cliente: any = null;
+  constructor(private clienteService: ClienteService){}
+
+  ngOnInit(): void{
+    this.cliente = this.clienteService.leerSesion();
+    console.log('logueado', this.cliente)
+  }
 
 }

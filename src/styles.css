@@ -1,22 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
 * {
+    margin: auto;
     --text-color: rgb(91, 189, 219);
     --text-color-title: rgb(78, 138, 206);
+    --text-color-main: rgb(25, 83, 148);
     --text-negative-color: white;
     --text-secondary-color: rgb(91, 218, 175);
     --background-color-alternative: rgb(91, 189, 219);
-    --submenu: rgba(78, 138, 206, 0.5);
+    --background-gradiant: linear-gradient(90deg, rgba(51, 83, 209, 1) 0%, rgba(91, 189, 219, 1) 40%, rgba(50, 255, 253, 1) 100%);
+
+    --submenu: rgba(78, 138, 206, 0.7);
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
-
-html {
+main{
+    height: 100vh;
 
     margin: auto;
+
+
+    background: linear-gradient(0deg, rgba(51,83,209,1) 0%, rgba(91,189,219,1) 40%, rgba(193,247,255,1) 100%);
+
+
+}
+
+.contenedor {
+    margin: auto;
     max-width: 678px;
-    background-color: var(--text-color);
+    list-style-type: none;
+    border-radius: 15px;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+    background-color: var(--text-negative-color);
 }
 
 h2,
@@ -24,47 +42,65 @@ h3 {
     color: var(--text-color-title)
 }
 
-h1{
+h1 {
     color: var(--text-negative-color);
     text-align: center;
 }
 
-a { 
+.menu-item {
+    color: var(--text-color-main);
+
+}
+
+a {     cursor: pointer;
+
     text-decoration: none;
 }
 
-p{
+p {
     color: var(--text-color)
 }
 
-p:hover{
-    padding: 5px;
-    color: var(--text-negative-color);
-    background-color: var(--text-color)
+.textLink {
+    color: var(--text-color-title)
 }
 
 
-ul{
+ul {
+    border-radius: 5px;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-a{
+/* a {
     color: var(--text-negative-color);
-    font-weight: 600px;
+    font-weight: 600;
     width: 100px;
-}
+} */
 
-li a:hover{
-    color: var(--background-color-alternative);
+li :hover{
+    color: var(--text-negative-color);
+    background-color: var(--text-color-title);
+    border-radius: 5px;
+    
+
+}
+a :hover {
+    color: var(--text-color-title);
+
+}
+li .active-menu{
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: var(--text-color-title);
     background-color: var(--text-negative-color);
 
 }
 
-.active-menu{
-    background-color: var(--text-color-title);
-}
+
+
 
 .fila-tabla {
     display: flex;
@@ -72,59 +108,37 @@ li a:hover{
 
 }
 
-
+.fila-tabla>div {
+    width: 25%;
+}
 
 .cabeza-tabla {
     font-weight: 600;
 }
 
-.fila-tabla>div {
-    width: 25%;
-}
-
 .navbar {
+    max-width: 620px;
     font-size: 15px;
     padding: 15px;
 }
 
-.menu-item{
-    font-weight:700;
+.menu-item {
+    font-weight: 700;
 }
 
-input{
-    border: 2px solid var(--text-color-title);
-    border-radius: 20px;    
-    color: var(--text-color-title);
-    background-color: var(--text-negative-color);
-    padding: 5px;
-}
-
-::placeholder{
+::placeholder {
     color: var(--submenu);
 }
 
-button{
-    color:var(--text-negative-color);
-    background-color: var(--submenu);
-    border-radius: 20px;
-    border: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 5px;
-    padding-right: 10px;
-}
-button:hover {
-    color: var(--text-negative-color);
-    background-color: var(--text-color-title);
-    font-size: 14px;
-}
 
-.main-menu{
+/* .main-menu {
     background-color: var(--text-color);
     margin-bottom: 25px;
-}
+} */
 
 .main-menu ul {
+    color: var(--text-negative-color);
+    font-weight: 600;
     justify-content: center;
     list-style: none;
     display: flex;
@@ -133,30 +147,29 @@ button:hover {
     gap: 20px;
 }
 
-.contenedor {
-    list-style-type: none;
-    border-radius: 15px;
-
-    color: var(--text-color);
-    padding-top: 10px;
-    padding-left: 15px;
-    padding-bottom: 15px;
-    border-radius: 10px;
+/* ul li :hover{
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: var(--text-color-title);
     background-color: var(--text-negative-color);
-}
+} */
 
-.menu-transferencias{
-    color: var(--text-color);
+/* Corrige el problema del texto que desaparecía en los menús desplegables */
+/* .active-menu{
+    color: var(--text-negative-color);
+}
+*/
+ 
+ .menu-transferencias {
+    color: var(--text-title-color);
+    font-weight: 600;
     padding-bottom: 5px;
 }
-
-.menu-transferencias:hover{
+ .menu-transferencias :hover{
+    border-radius: 5px;
+    font-weight: 600;
+    padding: 4px;
     color: var(--text-negative-color);
     background-color: var(--text-color);
 }
-
-/* @media(max-width: 768px){
-    .main-menu ul{
-    display: block;
-    }
-} */

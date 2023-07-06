@@ -12,3 +12,19 @@
     background-color: var(--submenu);
     display: block;
 }
+
+.logo-main-page{
+    text-align: center;
+    gap: 10px;
+}
+
+img{
+    margin-top: 5%;
+
+}
+
+.menu-item{
+    align-items: center;
+    image-resolution: 60px;
+    cursor: pointer;
+}

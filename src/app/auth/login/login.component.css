@@ -1,12 +1,42 @@
 ul{
     max-width: 200px;
+    margin-left: 10%;
+}
+
+input{
+
+    border: 2px solid var(--text-color-title);
+    border-radius: 20px;
+    color: var(--text-color-title);
+    background-color: var(--text-negative-color);
+    padding: 5px;
 }
 
 .login{
-    padding: 10px;
-}
+ margin-bottom: 5%;
+}   
 
 .iniciar{
+    border-radius: 10px;
     padding: 10px;
     gap: 15px;
+
+}
+
+button {
+    color: var(--text-negative-color);
+    background-color: var(--submenu);
+    border-radius: 20px;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 10px;
+
+}
+
+button:hover {
+    color: var(--text-negative-color);
+    background-color: var(--text-color-title);
+    font-size: 14px;
 }

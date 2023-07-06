@@ -1,4 +1,4 @@
-export const usuarios = [
+export const clientes = [
     {
         id: 1,
         id_gestor: 1,

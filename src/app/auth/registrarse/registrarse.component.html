@@ -1,0 +1,16 @@
+<section>
+    <h2>Nueva Transferencia:</h2>
+    <div class="usuario">
+        <input [(ngModel)]="nuevoRegistro.usuario" placeholder="Nombre" type="text">
+    </div>
+    <div class="correo">
+        <input [(ngModel)]="nuevoRegistro.correo" placeholder="algo@algo.com" type="text">
+    </div>
+    <div class="password">
+        <input [(ngModel)]="nuevoRegistro.password" placeholder="Contraseña" type="password">
+    </div>
+    <div class="transferenciar">
+        <button (click)="registro()">Completar registro</button>
+    </div>
+    <p>{{feedback}}</p>
+</section>

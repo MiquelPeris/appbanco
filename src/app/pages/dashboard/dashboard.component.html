@@ -1,1 +1,26 @@
-<p>¡Página de inicio! :D</p>
+<h3 *ngIf="!cliente">Accede a tu cuenta:</h3>
+<div>
+    <button *ngIf="!cliente" class="boton-login" routerLink="/auth">
+        <p class="texto-boton">Iniciar sesión</p>
+    </button>
+</div>
+<h3 *ngIf="!cliente">Si no tienes una cuenta, regístrate aquí:</h3>
+<div>
+    <button *ngIf="!cliente" class="boton-login" routerLink="/auth/registro">
+    <p class="texto-boton">Registrarse</p>
+</button>
+</div>
+
+
+
+<div *ngIf="cliente">
+    <p >¡Bienvenido!</p>
+
+    <p *ngIf="cliente">Usuario: {{cliente.usuario}}</p>
+
+    <p *ngIf="cliente">Saldo Actual: {{cliente.saldo| currency:"EUR"}} </p>
+
+    <p *ngIf="cliente">Gestor: {{cliente.gestor.usuario}}</p>
+</div>
+
+

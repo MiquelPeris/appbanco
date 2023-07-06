@@ -20,11 +20,27 @@ export class LoginComponent {
     const usuario = this.clienteService.hacerLogin(this.email, this.password)
     if(usuario){
       console.log(usuario)
-      this.router.navigateByUrl("/pages/dashboard")
+
     } else{
       console.error("Usuario o contraseña incorrectos")
     }
 
+  }
+
+  enviarLogin(){
+    this.clienteService.login(this.email, this.password).subscribe(
+      cliente =>{    
+        if(cliente){
+          this.clienteService.crearSesion(cliente);
+          this.router.navigateByUrl("/pages/dashboard")
+        }  else {
+          console.log('Login incorrecto')
+        }
+      },
+      (error) => {
+        console.log({error});
+      }
+    )
   }
 
 

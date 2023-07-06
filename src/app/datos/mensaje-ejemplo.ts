@@ -1,4 +1,4 @@
-import { usuarios } from "./usuarios-ejemplo";
+import { clientes } from "./clientes-ejemplo";
 
 export const mensajes = [
 

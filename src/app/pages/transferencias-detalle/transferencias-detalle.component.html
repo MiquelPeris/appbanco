@@ -1,8 +1,7 @@
 <h2>Detalles de la Transferencia</h2>
 
-<p>Ordenante: {{transferencia.idOrdenante}}</p>
+<p>Ordenante: {{transferencia.ordenante.usuario}}</p>
 <p>{{transferencia.importe | currency: "EUR"}}</p>
 <p>{{transferencia.concepto}}</p>
+<p>Beneficiario: {{transferencia.beneficiario.usuario}}</p>
 <p>{{transferencia.fecha | date: "short"}}</p>
-
-<p>Beneficiario: {{transferencia.idBeneficiario}}</p>

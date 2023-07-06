@@ -12,6 +12,7 @@ import { IngresosGastosComponent } from './ingresos-gastos/ingresos-gastos.compo
 import { TransferenciaNuevaComponent } from './transferencia-nueva/transferencia-nueva.component';
 import { TransferenciasListaComponent } from './transferencias-lista/transferencias-lista.component';
 import { TransferenciasDetalleComponent } from './transferencias-detalle/transferencias-detalle.component';
+import { AuthModule } from '../auth/auth.module';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { TransferenciasDetalleComponent } from './transferencias-detalle/transfe
     PagesRoutingModule,
     FormsModule, 
     ComponentesModule,
+    AuthModule
   ]
 })
 export class PagesModule { }
